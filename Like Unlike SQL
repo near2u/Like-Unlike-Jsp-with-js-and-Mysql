@@ -1,0 +1,123 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.1.30-community
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema travel_recommendation
+--
+
+CREATE DATABASE IF NOT EXISTS travel_recommendation;
+USE travel_recommendation;
+
+--
+-- Definition of table `filedetails_tbl`
+--
+
+DROP TABLE IF EXISTS `filedetails_tbl`;
+CREATE TABLE `filedetails_tbl` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `uid` int(10) unsigned NOT NULL,
+  `filename` varchar(45) NOT NULL,
+  `lat` varchar(45) NOT NULL,
+  `lng` varchar(45) NOT NULL,
+  `tags` varchar(45) NOT NULL,
+  `somethingtext` varchar(45) NOT NULL,
+  `filepath` longtext NOT NULL,
+  `hashtag` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_filedetails_tbl_1` (`uid`),
+  CONSTRAINT `FK_filedetails_tbl_1` FOREIGN KEY (`uid`) REFERENCES `user_registration` (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `filedetails_tbl`
+--
+
+/*!40000 ALTER TABLE `filedetails_tbl` DISABLE KEYS */;
+INSERT INTO `filedetails_tbl` (`id`,`uid`,`filename`,`lat`,`lng`,`tags`,`somethingtext`,`filepath`,`hashtag`) VALUES 
+ (2,2,'Tulips.jpg','19.0759837','72.87765590000004','Vishal Kawade,Prashant Patila,b,c','lets do somthing strange','F:/Geotag Image/Tulips.jpg',''),
+ (3,2,'Penguins.jpg','17.9356958','73.57863359999999','vish,nila,b,c','lets do somthing strange','F:/Geotag Image/Penguins.jpg',''),
+ (4,2,'Koala.jpg','17.9356958','73.57863359999999','Nilesh Aher,Prashant Patil,Vishal Kawadea,b,c','at # fort shiv janmstal','F:/Geotag Image/Koala.jpg',''),
+ (5,2,'Koala.jpg','17.9356958','73.57863359999999','Nilesh Aher,Prashant Patil,Vishal Kawadea,b,c','at # fort shiv janmstal','F:/Geotag Image/Koala.jpg',''),
+ (6,2,'Desert.jpg','18.5204303','73.85674369999992','nilesh ahera,b,c','at #fort #historical_places','F:/Geotag Image/Desert.jpg','[fort, historical_places]'),
+ (7,2,'Desert.jpg','18.5204303','73.85674369999992','nilesh ahera,b,ca,b,c','at #fort #historical_places','F:/Geotag Image/Desert.jpg','[fort, historical_places]');
+/*!40000 ALTER TABLE `filedetails_tbl` ENABLE KEYS */;
+
+
+--
+-- Definition of table `likes`
+--
+
+DROP TABLE IF EXISTS `likes`;
+CREATE TABLE `likes` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `userid` longtext,
+  `imgid` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `likes`
+--
+
+/*!40000 ALTER TABLE `likes` DISABLE KEYS */;
+INSERT INTO `likes` (`id`,`userid`,`imgid`) VALUES 
+ (1,'1,10,5,4,3,2,15,111',2),
+ (2,'1',2),
+ (3,'1',2),
+ (4,'1',2),
+ (5,'1,5,5,5,5,5,5,5,5,5,5,5,5,5,5',2),
+ (6,'1',2),
+ (7,'18,8,8,8,8,8,8,8,8,8,8,8,8,8',2),
+ (8,'1',2),
+ (9,'1',2);
+/*!40000 ALTER TABLE `likes` ENABLE KEYS */;
+
+
+--
+-- Definition of table `user_registration`
+--
+
+DROP TABLE IF EXISTS `user_registration`;
+CREATE TABLE `user_registration` (
+  `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `phono` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_registration`
+--
+
+/*!40000 ALTER TABLE `user_registration` DISABLE KEYS */;
+INSERT INTO `user_registration` (`uid`,`first_name`,`last_name`,`phono`,`email`,`password`) VALUES 
+ (1,'Prashant','Patil','7350292940','lcubrcreation123@gmail.com','amit'),
+ (2,'Deepali','aher','9011207690','nileshaher31@gmail.com','aaaaaa');
+/*!40000 ALTER TABLE `user_registration` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

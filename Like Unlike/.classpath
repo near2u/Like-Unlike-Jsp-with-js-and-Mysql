@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="H:/Apache Tomcat/apache-tomcat-7.0.42/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="H:/Apache Tomcat/apache-tomcat-7.0.42/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="H:/Project Related Softwares/mysql-connector-java-5.1.21-bin.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/commons-imaging-1.0.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/commons-io-2.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/commons-io-2.4-sources.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/commons-net-3.3.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/commons-validator-1.4.1.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/gson-2.3.1-sources.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/imgscalr-lib-4.2.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/imgscalr-lib-4.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/imgscalr-lib-4.2-sources.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/jai_imageio-1.1.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/javaxt-core.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/metadata-extractor-2.8.1.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/mysql-connector-java-5.1.36-bin.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/poi-3.12.jar"/>
+	<classpathentry kind="lib" path="F:/upload/Geotag-Images-master/Geotag-Images-master/lib/xmpcore-5.1.2.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
